@@ -3,280 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Avançado da Saúde Visual</title>
+    <title>Portal da Saúde Visual</title>
     <style>
-        :root {
-            --bg-principal: #f0f4f8;
-            --bg-card: #ffffff;
-            --texto-principal: #1e293b;
-            --texto-secundario: #475569;
-            --cor-primaria: #0056b3;
-            --cor-secundaria: #00b4d8;
-            --cor-destaque: #03045e;
-            --sombra: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-            --borda-raio: 12px;
-        }
-
-        /* Classes de Acessibilidade */
-        .alto-contraste {
-            --bg-principal: #000000;
-            --bg-card: #121212;
-            --texto-principal: #ffffff;
-            --texto-secundario: #e2e8f0;
-            --cor-primaria: #ffff00;
-            --cor-secundaria: #00ffff;
-            --cor-destaque: #ffffff;
-            --sombra: none;
-        }
-
-        .fonte-grande {
-            font-size: 1.3rem;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.7;
-            background-color: var(--bg-principal);
-            color: var(--texto-principal);
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Barra de Acessibilidade */
-        .barra-acessibilidade {
-            background-color: var(--cor-destaque);
-            padding: 0.6rem;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .btn-acessibilidade {
-            background-color: var(--bg-card);
-            color: var(--cor-primaria);
-            border: 2px solid transparent;
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: all 0.2s;
-        }
-
-        .btn-acessibilidade:hover {
-            transform: scale(1.05);
-        }
-        
-        .alto-contraste .btn-acessibilidade {
-            color: #000000;
-            background-color: #ffff00;
-            border: 2px solid #ffffff;
-        }
-
-        header {
-            background: linear-gradient(135deg, #03045e 0%, #0077b6 50%, #00b4d8 100%);
-            color: white;
-            padding: 4rem 1.5rem;
-            text-align: center;
-            box-shadow: inset 0 -10px 20px rgba(0,0,0,0.1);
-        }
-
-        .alto-contraste header {
-            background: #000000;
-            border-bottom: 4px solid #ffff00;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            margin-top: 1rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        main {
-            max-width: 950px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .intro {
-            background-color: var(--bg-card);
-            border-left: 6px solid var(--cor-secundaria);
-            padding: 2rem;
-            border-radius: var(--borda-raio);
-            box-shadow: var(--sombra);
-            margin-bottom: 3rem;
-            font-size: 1.15rem;
-        }
-
-        h2 {
-            color: var(--cor-primaria);
-            font-size: 2rem;
-            margin-top: 3.5rem;
-            border-bottom: 3px solid var(--cor-secundaria);
-            padding-bottom: 0.6rem;
-        }
-
-        .grid-doencas {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .doenca-card {
-            background-color: var(--bg-card);
-            border-radius: var(--borda-raio);
-            box-shadow: var(--sombra);
-            border: 1px solid rgba(0,0,0,0.03);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .alto-contraste .doenca-card {
-            border: 2px solid #ffffff;
-        }
-
-        .img-container {
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-            background-color: #cbd5e1;
-        }
-
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card-conteudo {
-            padding: 2rem;
-        }
-
-        .doenca-card h3 {
-            margin-top: 0;
-            color: var(--cor-primaria);
-            font-size: 1.6rem;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-
-        .detalhes-lista {
-            margin: 1rem 0 0 0;
-            padding-left: 1.2rem;
-            color: var(--texto-secundario);
-        }
-
-        .detalhes-lista li {
-            margin-bottom: 0.4rem;
-        }
-
-        .tag-info {
-            display: inline-block;
-            background-color: #e0f2fe;
-            color: #0369a1;
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .alto-contraste .tag-info {
-            background-color: #fff;
-            color: #000;
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem 1.5rem;
-            background-color: var(--cor-destaque);
-            color: #ffffff;
-            margin-top: 6rem;
-            font-size: 1rem;
-            border-top: 4px solid var(--cor-secundaria);
-        }
-
-        @media (min-width: 768px) {
-            .doenca-card {
-                flex-direction: row;
-            }
-            .img-container {
-                width: 40%;
-                height: auto;
-                min-height: 300px;
-            }
-            .card-conteudo {
-                width: 60%;
-            }
-        }
+        :root { --bg-principal: #f0f4f8; --bg-card: #ffffff; --texto-principal: #1e293b; --texto-secundario: #475569; --cor-primaria: #0056b3; --cor-secundaria: #00b4d8; --cor-destaque: #03045e; --sombra: 0 10px 15px -3px rgba(0,0,0,0.05); --borda-raio: 12px; }
+        .alto-contraste { --bg-principal: #000000; --bg-card: #121212; --texto-principal: #ffffff; --texto-secundario: #e2e8f0; --cor-primaria: #ffff00; --cor-secundaria: #00ffff; --cor-destaque: #ffffff; --sombra: none; }
+        .fonte-grande { font-size: 1.3rem; }
+        body { font-family: system-ui, sans-serif; line-height: 1.7; background-color: var(--bg-principal); color: var(--texto-principal); margin: 0; padding: 0; transition: all 0.3s; }
+        .barra-acessibilidade { background-color: var(--cor-destaque); padding: 0.6rem; text-align: center; display: flex; justify-content: center; gap: 12px; position: sticky; top: 0; z-index: 1000; }
+        .btn-acessibilidade { background-color: var(--bg-card); color: var(--cor-primaria); border: 2px solid transparent; padding: 0.6rem 1.2rem; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 0.9rem; }
+        .alto-contraste .btn-acessibilidade { color: #000000; background-color: #ffff00; border: 2px solid #ffffff; }
+        header { background: linear-gradient(135deg, #03045e 0%, #0077b6 50%, #00b4d8 100%); color: white; padding: 4rem 1.5rem; text-align: center; }
+        .alto-contraste header { background: #000000; border-bottom: 4px solid #ffff00; }
+        h1 { margin: 0; font-size: 2.6rem; font-weight: 800; }
+        .subtitle { font-size: 1.3rem; margin-top: 1rem; opacity: 0.95; }
+        main { max-width: 950px; margin: 3rem auto; padding: 0 1.5rem; }
+        .intro { background-color: var(--bg-card); border-left: 6px solid var(--cor-secundaria); padding: 2rem; border-radius: var(--borda-raio); box-shadow: var(--sombra); margin-bottom: 3rem; font-size: 1.15rem; }
+        h2 { color: var(--cor-primaria); font-size: 2rem; margin-top: 3.5rem; border-bottom: 3px solid var(--cor-secundaria); padding-bottom: 0.6rem; }
+        .grid-doencas { display: flex; flex-direction: column; gap: 2.5rem; }
+        .doenca-card { background-color: var(--bg-card); border-radius: var(--borda-raio); box-shadow: var(--sombra); overflow: hidden; display: flex; flex-direction: column; }
+        .alto-contraste .doenca-card { border: 2px solid #ffffff; }
+        .img-container { width: 100%; height: 250px; overflow: hidden; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .card-conteudo { padding: 2rem; }
+        .doenca-card h3 { margin-top: 0; color: var(--cor-primaria); font-size: 1.6rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem; }
+        .detalhes-lista { margin: 1rem 0 0 0; padding-left: 1.2rem; color: var(--texto-secundario); }
+        .detalhes-lista li { margin-bottom: 0.4rem; }
+        .tag-info { display: inline-block; background-color: #e0f2fe; color: #0369a1; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 1rem; }
+        .alto-contraste .tag-info { background-color: #fff; color: #000; }
+        footer { text-align: center; padding: 3rem 1.5rem; background-color: var(--cor-destaque); color: #ffffff; margin-top: 6rem; border-top: 4px solid var(--cor-secundaria); }
+        @media (min-width: 768px) { .doenca-card { flex-direction: row; } .img-container { width: 40%; min-height: 300px; } .card-conteudo { width: 60%; } }
     </style>
 </head>
 <body>
-
     <div class="barra-acessibilidade">
-        <button class="btn-acessibilidade" onclick="toggleContraste()" aria-label="Alternar modo de alto contraste">🌓 Alto Contraste</button>
-        <button class="btn-acessibilidade" onclick="toggleFonte()" aria-label="Aumentar o tamanho da letra do site">🔎 Aumentar Texto</button>
+        <button class="btn-acessibilidade" onclick="toggleContraste()">🌓 Alto Contraste</button>
+        <button class="btn-acessibilidade" onclick="toggleFonte()">🔎 Aumentar Texto</button>
     </div>
-
     <header>
         <h1>Portal da Saúde Visual</h1>
         <p class="subtitle">Guia completo de conscientização, prevenção e informações sobre as principais patologias oculares.</p>
     </header>
-
     <main id="conteudo">
         <section class="intro">
-            <p>Seja bem-vindo ao portal de saúde ocular. Estimar e cuidar da integridade visual vai muito além de enxergar com nitidez. Abaixo, reunimos informações detalhadas e ricas sobre os problemas mais frequentes para ajudar você a identificar sinais importantes e buscar ajuda médica a tempo.</p>
+            <p>Seja bem-vindo ao portal de saúde ocular. Cuidar dos olhos vai muito além de enxergar com nitidez. Reunimos informações detalhadas para ajudar você a identificar sinais importantes e buscar ajuda médica a tempo.</p>
         </section>
-
         <section>
             <h2>Guia de Patologias Oculares</h2>
-            
             <div class="grid-doencas">
-                
-                <!-- CARD 1: CATARATA -->
                 <div class="doenca-card">
-                    <div class="img-container">
-                        <img src="https://unsplash.com" alt="Médico oftalmologista examinando detalhadamente os olhos de uma paciente idosa em um consultório iluminado.">
-                    </div>
+                    <div class="img-container"><img src="https://unsplash.com" alt="Exame"></div>
                     <div class="card-conteudo">
                         <span class="tag-info">Condição Reversível</span>
                         <h3>1. Catarata</h3>
-                        <p>Trata-se da perda de transparência do cristalino, a lente natural dos nossos olhos. O processo bloqueia a entrada de luz de forma gradual, gerando uma névoa visual contínua.</p>
+                        <p>Trata-se da perda de transparência do cristalino, a lente natural dos nossos olhos. O processo bloqueia a entrada de luz de forma gradual.</p>
                         <ul class="detalhes-lista">
-                            <li><strong>Sintomas comuns:</strong> Visão esfumaçada, sensibilidade extrema à luz do sol ou de faróis à noite, perda do brilho das cores.</li>
-                            <li><strong>Fatores de risco:</strong> Envelhecimento natural (mais comum após os 60 anos), diabetes, uso prolongado de corticoides e exposição solar sem óculos de proteção.</li>
-                            <li><strong>Tratamento:</strong> Cirurgia de substituição do cristalino por uma lente artificial intraocular, restaurando completamente a nitidez visual.</li>
+                            <li><strong>Sintomas:</strong> Visão esfumaçada, sensibilidade extrema à luz e perda do brilho das cores.</li>
+                            <li><strong>Fatores de risco:</strong> Idade acima de 60 anos, diabetes e exposição solar sem proteção.</li>
+                            <li><strong>Tratamento:</strong> Cirurgia de substituição do cristalino por uma lente artificial.</li>
                         </ul>
                     </div>
                 </div>
-
-                <!-- CARD 2: GLAUCOMA -->
                 <div class="doenca-card">
-                    <div class="img-container">
-                        <img src="https://unsplash.com" alt="Equipamento médico de alta tecnologia realizando exame de pressão intraocular para prevenção de glaucoma.">
-                    </div>
+                    <div class="img-container"><img src="https://unsplash.com" alt="Exame"></div>
                     <div class="card-conteudo">
                         <span class="tag-info">Condição Crônica</span>
                         <h3>2. Glaucoma</h3>
-                        <p>É uma lesão progressiva no nervo óptico, frequentemente associada ao aumento indesejado da pressão interna do olho. Por não causar dor nas fases iniciais, é considerada uma doença silenciosa e altamente perigosa.</p>
+                        <p>É uma lesão progressiva no nervo óptico, frequentemente associada ao aumento indesejado da pressão interna do olho.</p>
                         <ul class="detalhes-lista">
-                            <li><strong>Sintomas comuns:</strong> Perda lenta da visão lateral (periférica), criando um efeito de "visão em túnel" nos estágios mais avançados.</li>
+                            <li><strong>Sintomas:</strong> Perda lenta da visão lateral (periférica), criando um efeito de visão em túnel.</li>
+                            <li><strong>Fatores de risco:</strong> Histórico familiar, idade acima de 40 anos e pressão ocular elevada.</li>
+                            <li><strong>Tratamento:</strong> Controle com uso diário de colírios especiais ou procedimentos a laser.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doenca-card">
+                    <div class="img-container"><img src="https://unsplash.com" alt="Exame"></div>
+                    <div class="card-conteudo">
+                        <span class="tag-info">Prevenção pelo Sangue</span>
+                        <h3>3. Retinopatia Diabética</h3>
+                        <p>Uma complicação direta do diabetes que afeta os vasos sanguíneos da retina devido ao excesso crônico de açúcar no sangue.</p>
+                        <ul class="detalhes-lista">
+                            <li><strong>Sintomas:</strong> Visão borrada, manchas escuras flutuantes e perda visual súbita.</li>
+                            <li><strong>Fatores de risco:</strong> Tempo de diagnóstico do diabetes e falta de controle da glicemia.</li>
+                            <li><strong>Tratamento:</strong> Injeções intraoculares ou aplicações de fotocoagulação a laser.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doenca-card">
+                    <div class="img-container"><img src="https://unsplash.com" alt="Exame"></div>
+                    <div class="card-conteudo">
+                        <span class="tag-info">Cuidado Centrado</span>
+                        <h3>4. Degeneração Macular (DMRI)</h3>
+                        <p>Condição degenerativa que desgasta a mácula, prejudicando diretamente a capacidade de enxergar detalhes nítidos à frente.</p>
+                        <ul class="detalhes-lista">
+                            <li><strong>Sintomas:</strong> Visão distorcida no centro do campo visual e presença de mancha escura fixa.</li>
+                            <li><strong>Fatores de risco:</strong> Idade avançada (acima de 60 anos), tabagismo e histórico familiar.</li>
+                            <li><strong>Tratamento:</strong> Suplementações vitamínicas específicas ou injeções intravítreas periódicas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: var(--bg-card); padding: 2rem; border-radius: var(--borda-raio); margin-top: 3.5rem; box-shadow: var(--sombra);">
+            <h2>Agende Consultas Anuais</h2>
+            <p>Mais de 80% das complicações graves poderiam ser completamente evitadas com visitas regulares ao médico oftalmologista. Faça exames preventivos pelo menos uma vez ao ano!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Portal de Conscientização Visual. Criado com foco em acessibilidade digital.</p>
+    </footer>
+    <script>
+        function toggleContraste() { document.body.classList.toggle('alto-contraste'); }
+        function toggleFonte() { document.body.classList.toggle('fonte-grande'); }
+    </script>
+</body>
+</html>
