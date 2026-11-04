@@ -3,97 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Ocular</title>
+    <title>Conscientização: Doenças Visuais</title>
     <style>
-        :root { --bg: #f0f4f8; --card: #ffffff; --txt: #1e293b; --txt2: #475569; --p1: #0056b3; --p2: #00b4d8; --p3: #03045e; }
-        .alto-contraste { --bg: #000; --card: #121212; --txt: #fff; --txt2: #e2e8f0; --p1: #ffff00; --p2: #00ffff; --p3: #fff; }
-        .fonte-grande { font-size: 1.3rem; }
-        body { font-family: system-ui, sans-serif; line-height: 1.6; background-color: var(--bg); color: var(--txt); margin: 0; padding: 0; transition: 0.3s; }
-        .barra-acessibilidade { background-color: var(--p3); padding: 0.6rem; text-align: center; display: flex; justify-content: center; gap: 12px; position: sticky; top: 0; }
-        .btn-acessibilidade { background-color: var(--card); color: var(--p1); border: none; padding: 0.6rem 1.2rem; border-radius: 30px; cursor: pointer; font-weight: bold; }
-        .alto-contraste .btn-acessibilidade { color: #000; background-color: #ffff00; border: 2px solid #fff; }
-        header { background: linear-gradient(135deg, #03045e 0%, #0077b6 50%, #00b4d8 100%); color: white; padding: 3rem 1.5rem; text-align: center; }
-        .alto-contraste header { background: #000; border-bottom: 4px solid #ffff00; }
-        h1 { margin: 0; font-size: 2.2rem; }
-        main { max-width: 800px; margin: 2rem auto; padding: 0 1.2rem; }
-        .intro { background-color: var(--card); border-left: 6px solid var(--p2); padding: 1.5rem; border-radius: 8px; font-size: 1.1rem; }
-        h2 { color: var(--p1); font-size: 1.8rem; border-bottom: 3px solid var(--p2); padding-bottom: 0.4rem; }
-        .grid-doencas { display: flex; flex-direction: column; gap: 2rem; }
-        .doenca-card { background-color: var(--card); border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); padding: 1.5rem; }
-        .alto-contraste .doenca-card { border: 2px solid #fff; }
-        .doenca-card h3 { margin-top: 0; color: var(--p1); font-size: 1.5rem; }
-        .tag-info { display: inline-block; background-color: #e0f2fe; color: #0369a1; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.8rem; }
-        .alto-contraste .tag-info { background-color: #fff; color: #000; }
-        .emoji-img { font-size: 4rem; text-align: center; margin-bottom: 1rem; background: #e2e8f0; padding: 1rem; border-radius: 8px; }
-        .alto-contraste .emoji-img { background: #222; }
-        footer { text-align: center; padding: 2rem; background-color: var(--p3); color: #fff; margin-top: 4rem; }
+        /* Cores vibrantes e estilo global */
+        body {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            background: linear-gradient(135deg, #ff007f, #7f00ff, #00f0ff);
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Títulos gigantes e chamativos */
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            text-shadow: 4px 4px 0px #000000;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            background-color: #000000;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            color: #00ff66;
+        }
+
+        /* Container dos cartões de doenças */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo super colorido para cada card */
+        .card {
+            background-color: #111111;
+            border: 5px solid #ffffff;
+            border-radius: 20px;
+            width: 350px;
+            overflow: hidden;
+            box-shadow: 8px 8px 0px #000000;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Cores específicas de borda para destacar */
+        .miopia { border-color: #ff3366; }
+        .astigmatismo { border-color: #ff9900; }
+        .glaucoma { border-color: #33cc33; }
+        .catarata { border-color: #0099ff; }
+
+        /* Imagens configuradas para preenchimento */
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 5px solid #ffffff;
+        }
+
+        /* Textos dentro dos cartões */
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h2 {
+            font-size: 2.2rem;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+        }
+
+        .miopia h2 { color: #ff3366; }
+        .astigmatismo h2 { color: #ff9900; }
+        .glaucoma h2 { color: #33cc33; }
+        .catarata h2 { color: #0099ff; }
+
+        .card p {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #dddddd;
+            text-align: left;
+        }
+
+        /* Rodapé chamativo */
+        footer {
+            margin-top: 60px;
+            font-size: 1.5rem;
+            background-color: #000000;
+            padding: 15px;
+            display: inline-block;
+            border-radius: 10px;
+            border: 2px dashed #ff007f;
+        }
     </style>
 </head>
 <body>
-    <div class="barra-acessibilidade">
-        <button class="btn-acessibilidade" onclick="toggleContraste()">🌓 Alto Contraste</button>
-        <button class="btn-acessibilidade" onclick="toggleFonte()">🔎 Aumentar Texto</button>
-    </div>
-    <header>
-        <h1>Portal da Saúde Visual</h1>
-        <p>Guia de conscientização e informações sobre patologias oculares.</p>
-    </header>
-    <main>
-        <section class="intro">
-            <p>Seja bem-vindo. Cuidar dos olhos é fundamental para a nossa autonomia. Reunimos abaixo dados importantes sobre as 4 principais doenças visuais para ajudar na prevenção precoce.</p>
-        </section>
-        <section>
-            <h2>Guia de Patologias Oculares</h2>
-            <div class="grid-doencas">
-                <!-- 1. CATARATA -->
-                <div class="doenca-card">
-                    <div class="emoji-img">👁️‍🗨️</div>
-                    <span class="tag-info">Condição Reversível</span>
-                    <h3>1. Catarata</h3>
-                    <p>Perda de transparência da lente natural do olho (cristalino), tornando a visão opaca.</p>
-                    <p><strong>Sintomas:</strong> Visão esfumaçada, sensibilidade à luz e cores desbotadas.<br>
-                    <strong>Fatores de risco:</strong> Idade acima de 60 anos, diabetes e exposição solar.<br>
-                    <strong>Tratamento:</strong> Cirurgia rápida e segura para colocar uma lente nova.</p>
-                </div>
-                <!-- 2. GLAUCOMA -->
-                <div class="doenca-card">
-                    <div class="emoji-img">👁️</div>
-                    <span class="tag-info">Condição Crônica</span>
-                    <h3>2. Glaucoma</h3>
-                    <p>Dano no nervo óptico ligado à pressão alta dentro do olho. É uma doença muito silenciosa.</p>
-                    <p><strong>Sintomas:</strong> Perda lenta da visão lateral (efeito de visão em túnel).<br>
-                    <strong>Fatores de risco:</strong> Histórico na família e idade acima de 40 anos.<br>
-                    <strong>Tratamento:</strong> Uso diário de colírios especiais ou tratamentos a laser.</p>
-                </div>
-                <!-- 3. RETINOPATIA DIABÉTICA -->
-                <div class="doenca-card">
-                    <div class="emoji-img">🩸</div>
-                    <span class="tag-info">Prevenção Importante</span>
-                    <h3>3. Retinopatia Diabética</h3>
-                    <p>Lesão nos pequenos vasos sanguíneos da retina causada pelo excesso de açúcar no sangue.</p>
-                    <p><strong>Sintomas:</strong> Visão borrada, manchas escuras voando e perda súbita.<br>
-                    <strong>Fatores de risco:</strong> Diabetes descontrolado por muito tempo.<br>
-                    <strong>Tratamento:</strong> Controle da glicose e aplicações de laser no fundo do olho.</p>
-                </div>
-                <!-- 4. DMRI -->
-                <div class="doenca-card">
-                    <div class="emoji-img">🔍</div>
-                    <span class="tag-info">Cuidado Central</span>
-                    <h3>4. Degeneração Macular (DMRI)</h3>
-                    <p>Desgaste na mácula (centro da retina), prejudicando a capacidade de ver detalhes à frente.</p>
-                    <p><strong>Sintomas:</strong> Mancha escura fixa no centro da visão e linhas tortas.<br>
-                    <strong>Fatores de risco:</strong> Idade avançada e tabagismo.<br>
-                    <strong>Tratamento:</strong> Vitaminas antioxidantes e injeções para conter o avanço.</p>
-                </div>
+
+    <h1>Doenças Visuais</h1>
+    <p class="subtitle">Entenda os principais distúrbios da visão de forma clara e visual!</p>
+
+    <div class="container">
+
+        <!-- Card 1: Miopia -->
+        <div class="card miopia">
+            <img src="https://unsplash.com" alt="Visão embaçada de longe">
+            <div class="card-content">
+                <h2>Miopia</h2>
+                <p>Dificuldade nítida para enxergar objetos que estão longe. O globo ocular é ligeiramente mais longo do que o normal, fazendo com que a luz foque antes da retina.</p>
             </div>
-        </section>
-    </main>
+        </div>
+
+        <!-- Card 2: Astigmatismo -->
+        <div class="card astigmatismo">
+            <img src="https://unsplash.com" alt="Luzes distorcidas da cidade">
+            <div class="card-content">
+                <h2>Astigmatismo</h2>
+                <p>Provoca visão borrada tanto de perto quanto de longe. É causado por uma curvatura irregular da córnea ou do cristalino, distorcendo os pontos de luz.</p>
+            </div>
+        </div>
+
+        <!-- Card 3: Glaucoma -->
+        <div class="card glaucoma">
+            <img src="https://unsplash.com" alt="Exame médico de olho">
+            <div class="card-content">
+                <h2>Glaucoma</h2>
+                <p>Doença que danifica o nervo óptico, geralmente ligada ao aumento da pressão interna do olho. Se não for tratado a tempo, pode levar à perda permanente da visão periférica.</p>
+            </div>
+        </div>
+
+        <!-- Card 4: Catarata -->
+        <div class="card catarata">
+            <img src="https://unsplash.com" alt="Olho com aspecto enublado">
+            <div class="card-content">
+                <h2>Catarata</h2>
+                <p>Consiste na opacificação do cristalino (a lente natural do olho). Deixa a visão progressivamente nublada ou enevoada, parecendo que você está olhando por uma janela embaçada.</p>
+            </div>
+        </div>
+
+    </div>
+
     <footer>
-        <p>&copy; 2026 Portal de Conscientização Visual. Foco total em acessibilidade digital.</p>
+        Consulte sempre um Oftalmologista regularmente! 👁️✨
     </footer>
-    <script>
-        function toggleContraste() { document.body.classList.toggle('alto-contraste'); }
-        function toggleFonte() { document.body.classList.toggle('fonte-grande'); }
-    </script>
+
 </body>
 </html>
