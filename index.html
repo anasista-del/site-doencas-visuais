@@ -3,148 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Visual: Conscientização e Informação</title>
+    <title>Portal Avançado da Saúde Visual</title>
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --primary-color: #0056b3;
-            --card-bg: #f8f9fa;
-            --border-color: #ccc;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
-            opacity: 0.9;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .intro {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 1rem;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.3rem;
-            margin-top: 2rem;
-        }
-
-        .doenca-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .doenca-card h3 {
-            margin-top: 0;
-            color: #004085;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: #1a1a1a;
-            color: white;
-            margin-top: 4rem;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Saúde Visual em Foco</h1>
-        <p class="subtitle">Conscientização e informações essenciais sobre doenças visuais</p>
-    </header>
-
-    <main>
-        <section class="intro">
-            <p>Cuidar da saúde dos olhos é fundamental para garantir qualidade de vida e autonomia. Conheça abaixo algumas das principais condições que afetam a visão e a importância do diagnóstico precoce.</p>
-        </section>
-
-        <section id="doencas">
-            <h2>Principais Doenças Visuais</h2>
-
-            <div class="doenca-card">
-                <h3>1. Catarata</h3>
-                <p>É a opacidade crônica do cristalino (a lente natural do olho). Costuma se desenvolver de forma lenta e progressiva, sendo mais comum em idosos. O principal sintoma é a visão nublada ou "esfumaçada". O tratamento definitivo é cirúrgico e altamente eficaz.</p>
-            </div>
-
-            <div class="doenca-card">
-                <h3>2. Glaucoma</h3>
-                <p>Uma doença que danifica o nervo óptico, geralmente ligada ao aumento da pressão interna do olho. É uma condição perigosa por ser silenciosa em seus estágios iniciais. Se não tratada a tempo com colírios ou cirurgia, pode levar à perda irreversível da visão periférica.</p>
-            </div>
-
-            <div class="doenca-card">
-                <h3>3. Retinopatia Diabética</h3>
-                <p>Uma complicação ocular causada pelo diabetes alto e descontrolado, que danifica os vasos sanguíneos da retina. Pode causar manchas na visão, embaçamento e, em casos graves, descolamento de retina. O controle do açúcar no sangue e exames frequentes são as melhores prevenções.</p>
-            </div>
-
-            <div class="doenca-card">
-                <h3>4. Degeneração Macular Relacionada à Idade (DMRI)</h3>
-                <p>Afeta a mácula, que é a parte da retina responsável pela visão central e detalhada. É uma das principais causas de perda de visão em pessoas acima de 60 anos, tornando difícil ler ou reconhecer rostos.</p>
-            </div>
-        </section>
-
-        <section id="prevencao">
-            <h2>A Importância da Prevenção</h2>
-            <p>Muitas patologias oculares não apresentam dor ou sintomas claros no início. Ir ao oftalmologista pelo menos uma vez por ano é o passo mais importante para proteger seus olhos e descobrir qualquer alteração logo no começo.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Portal Saúde Visual. Conteúdo estritamente informativo.</p>
-    </footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal da Saúde Visual</title>
-    <style>
-        :root {
-            --bg-principal: #f4f7f6;
+            --bg-principal: #f0f4f8;
             --bg-card: #ffffff;
-            --texto-principal: #2d3748;
-            --cor-primaria: #0a58ca;
-            --cor-secundaria: #0d6efd;
-            --sombra: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --texto-principal: #1e293b;
+            --texto-secundario: #475569;
+            --cor-primaria: #0056b3;
+            --cor-secundaria: #00b4d8;
+            --cor-destaque: #03045e;
+            --sombra: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            --borda-raio: 12px;
         }
 
         /* Classes de Acessibilidade */
@@ -152,17 +22,19 @@
             --bg-principal: #000000;
             --bg-card: #121212;
             --texto-principal: #ffffff;
+            --texto-secundario: #e2e8f0;
             --cor-primaria: #ffff00;
             --cor-secundaria: #00ffff;
+            --cor-destaque: #ffffff;
             --sombra: none;
         }
 
         .fonte-grande {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.7;
             background-color: var(--bg-principal);
             color: var(--texto-principal);
@@ -171,52 +43,35 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        header {
-            background: linear-gradient(135deg, #0a369d 0%, #0056b3 100%);
-            color: white;
-            padding: 3rem 1.5rem;
-            text-align: center;
-        }
-
-        .alto-contraste header {
-            background: #000000;
-            border-bottom: 3px solid #ffff00;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.3rem;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            margin-top: 0.8rem;
-            opacity: 0.9;
-        }
-
         /* Barra de Acessibilidade */
         .barra-acessibilidade {
-            background-color: #e9ecef;
-            padding: 0.5rem;
+            background-color: var(--cor-destaque);
+            padding: 0.6rem;
             text-align: center;
             display: flex;
             justify-content: center;
-            gap: 10px;
-        }
-
-        .alto-contraste .barra-acessibilidade {
-            background-color: #222;
+            gap: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .btn-acessibilidade {
-            background-color: var(--cor-primaria);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+            background-color: var(--bg-card);
+            color: var(--cor-primaria);
+            border: 2px solid transparent;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+
+        .btn-acessibilidade:hover {
+            transform: scale(1.05);
         }
         
         .alto-contraste .btn-acessibilidade {
@@ -225,130 +80,203 @@
             border: 2px solid #ffffff;
         }
 
+        header {
+            background: linear-gradient(135deg, #03045e 0%, #0077b6 50%, #00b4d8 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+            box-shadow: inset 0 -10px 20px rgba(0,0,0,0.1);
+        }
+
+        .alto-contraste header {
+            background: #000000;
+            border-bottom: 4px solid #ffff00;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         main {
-            max-width: 900px;
-            margin: 2.5rem auto;
+            max-width: 950px;
+            margin: 3rem auto;
             padding: 0 1.5rem;
         }
 
         .intro {
             background-color: var(--bg-card);
-            border-left: 5px solid var(--cor-primaria);
-            padding: 1.5rem;
-            border-radius: 0 8px 8px 0;
+            border-left: 6px solid var(--cor-secundaria);
+            padding: 2rem;
+            border-radius: var(--borda-raio);
             box-shadow: var(--sombra);
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
+            font-size: 1.15rem;
         }
 
         h2 {
             color: var(--cor-primaria);
-            font-size: 1.8rem;
-            margin-top: 2.5rem;
-            border-bottom: 2px solid var(--cor-primaria);
-            padding-bottom: 0.5rem;
+            font-size: 2rem;
+            margin-top: 3.5rem;
+            border-bottom: 3px solid var(--cor-secundaria);
+            padding-bottom: 0.6rem;
         }
 
         .grid-doencas {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 2.5rem;
         }
 
         .doenca-card {
             background-color: var(--bg-card);
-            border-radius: 8px;
-            padding: 1.8rem;
+            border-radius: var(--borda-raio);
             box-shadow: var(--sombra);
-            border: 1px solid transparent;
-            transition: transform 0.2s;
-        }
-
-        .doenca-card:hover {
-            transform: translateY(-2px);
+            border: 1px solid rgba(0,0,0,0.03);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .alto-contraste .doenca-card {
             border: 2px solid #ffffff;
         }
 
+        .img-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background-color: #cbd5e1;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-conteudo {
+            padding: 2rem;
+        }
+
         .doenca-card h3 {
             margin-top: 0;
-            color: var(--cor-secundaria);
-            font-size: 1.4rem;
+            color: var(--cor-primaria);
+            font-size: 1.6rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .detalhes-lista {
+            margin: 1rem 0 0 0;
+            padding-left: 1.2rem;
+            color: var(--texto-secundario);
+        }
+
+        .detalhes-lista li {
+            margin-bottom: 0.4rem;
+        }
+
+        .tag-info {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .alto-contraste .tag-info {
+            background-color: #fff;
+            color: #000;
         }
 
         footer {
             text-align: center;
-            padding: 2.5rem 1.5rem;
-            background-color: #111111;
+            padding: 3rem 1.5rem;
+            background-color: var(--cor-destaque);
             color: #ffffff;
-            margin-top: 5rem;
+            margin-top: 6rem;
             font-size: 1rem;
-            border-top: 4px solid var(--cor-primaria);
+            border-top: 4px solid var(--cor-secundaria);
+        }
+
+        @media (min-width: 768px) {
+            .doenca-card {
+                flex-direction: row;
+            }
+            .img-container {
+                width: 40%;
+                height: auto;
+                min-height: 300px;
+            }
+            .card-conteudo {
+                width: 60%;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="barra-acessibilidade">
-        <button class="btn-acessibilidade" onclick="toggleContraste()" aria-label="Alternar alto contraste">🌓 Alto Contraste</button>
-        <button class="btn-acessibilidade" onclick="toggleFonte()" aria-label="Aumentar tamanho do texto">🔎 Aumentar Texto</button>
+        <button class="btn-acessibilidade" onclick="toggleContraste()" aria-label="Alternar modo de alto contraste">🌓 Alto Contraste</button>
+        <button class="btn-acessibilidade" onclick="toggleFonte()" aria-label="Aumentar o tamanho da letra do site">🔎 Aumentar Texto</button>
     </div>
 
     <header>
-        <h1>Saúde Visual em Foco</h1>
-        <p class="subtitle">Conscientização e informações essenciais sobre patologias oculares</p>
+        <h1>Portal da Saúde Visual</h1>
+        <p class="subtitle">Guia completo de conscientização, prevenção e informações sobre as principais patologias oculares.</p>
     </header>
 
     <main id="conteudo">
         <section class="intro">
-            <p>Cuidar da visão vai muito além de enxergar bem. Conhecer as principais condições que afetam nossos olhos é o primeiro passo para promover a inclusão, a acessibilidade e a prevenção de riscos à saúde ocular.</p>
+            <p>Seja bem-vindo ao portal de saúde ocular. Estimar e cuidar da integridade visual vai muito além de enxergar com nitidez. Abaixo, reunimos informações detalhadas e ricas sobre os problemas mais frequentes para ajudar você a identificar sinais importantes e buscar ajuda médica a tempo.</p>
         </section>
 
         <section>
-            <h2>Principais Doenças Visuais</h2>
+            <h2>Guia de Patologias Oculares</h2>
             
             <div class="grid-doencas">
+                
+                <!-- CARD 1: CATARATA -->
                 <div class="doenca-card">
-                    <h3>1. Catarata</h3>
-                    <p>Trata-se da opacidade do cristalino (a lente natural do olho). Com o avanço da idade, a visão vai se tornando progressivamente embaçada, opaca e sem brilho, como se estivesse olhando através de um vidro sujo. O tratamento é feito por meio de uma cirurgia rápida e altamente segura.</p>
+                    <div class="img-container">
+                        <img src="https://unsplash.com" alt="Médico oftalmologista examinando detalhadamente os olhos de uma paciente idosa em um consultório iluminado.">
+                    </div>
+                    <div class="card-conteudo">
+                        <span class="tag-info">Condição Reversível</span>
+                        <h3>1. Catarata</h3>
+                        <p>Trata-se da perda de transparência do cristalino, a lente natural dos nossos olhos. O processo bloqueia a entrada de luz de forma gradual, gerando uma névoa visual contínua.</p>
+                        <ul class="detalhes-lista">
+                            <li><strong>Sintomas comuns:</strong> Visão esfumaçada, sensibilidade extrema à luz do sol ou de faróis à noite, perda do brilho das cores.</li>
+                            <li><strong>Fatores de risco:</strong> Envelhecimento natural (mais comum após os 60 anos), diabetes, uso prolongado de corticoides e exposição solar sem óculos de proteção.</li>
+                            <li><strong>Tratamento:</strong> Cirurgia de substituição do cristalino por uma lente artificial intraocular, restaurando completamente a nitidez visual.</li>
+                        </ul>
+                    </div>
                 </div>
 
+                <!-- CARD 2: GLAUCOMA -->
                 <div class="doenca-card">
-                    <h3>2. Glaucoma</h3>
-                    <p>Uma doença que provoca a degeneração do nervo óptico, na maioria das vezes provocada pelo aumento da pressão interna do olho. É uma condição assintomática no início, o que a torna muito perigosa. Se não tratada precocemente, pode comprimir o campo visual de fora para dentro, levando à cegueira irreversível.</p>
-                </div>
-
-                <div class="doenca-card">
-                    <h3>3. Retinopatia Diabética</h3>
-                    <p>Uma complicação gerada pelo excesso crônico de glicose no sangue, que danifica as paredes dos finos vasos sanguíneos da retina. Pode causar pequenos sangramentos internos, manchas escuras na visão e embaçamento súbito. O controle rígido do diabetes é indispensável.</p>
-                </div>
-
-                <div class="doenca-card">
-                    <h3>4. Degeneração Macular (DMRI)</h3>
-                    <p>Condição que desgasta a mácula — a região central e mais nobre da retina. Ela prejudica diretamente a visão de detalhes, impedindo que o paciente consiga ler letras pequenas, enfiar uma linha na agulha ou reconhecer o rosto de um familiar que está logo à frente.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>A Importância da Prevenção</h2>
-            <p>Cerca de 80% dos casos de deficiência visual no mundo poderiam ser evitados se fossem diagnosticados no início. Consultar um médico oftalmologista anualmente, mesmo sem sentir dores ou dificuldades aparentes, continua sendo o melhor método de prevenção e cuidado.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Portal de Conscientização Visual. Criado com foco em acessibilidade digital.</p>
-    </footer>
-
-    <script>
-        function toggleContraste() {
-            document.body.classList.toggle('alto-contraste');
-        }
-        function toggleFonte() {
-            document.body.classList.toggle('fonte-grande');
-        }
-    </script>
-</body>
-</html>
-
+                    <div class="img-container">
+                        <img src="https://unsplash.com" alt="Equipamento médico de alta tecnologia realizando exame de pressão intraocular para prevenção de glaucoma.">
+                    </div>
+                    <div class="card-conteudo">
+                        <span class="tag-info">Condição Crônica</span>
+                        <h3>2. Glaucoma</h3>
+                        <p>É uma lesão progressiva no nervo óptico, frequentemente associada ao aumento indesejado da pressão interna do olho. Por não causar dor nas fases iniciais, é considerada uma doença silenciosa e altamente perigosa.</p>
+                        <ul class="detalhes-lista">
+                            <li><strong>Sintomas comuns:</strong> Perda lenta da visão lateral (periférica), criando um efeito de "visão em túnel" nos estágios mais avançados.</li>
